@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sector 1 - Jugadores de Fútbol Intergaláctico</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h3 { color: #34495e; margin-top: 25px; }
+        ul { list-style-type: none; padding: 0; }
+        li { background: #ecf0f1; margin: 5px 0; padding: 10px; border-radius: 5px; }
+        .entrenador-info { background: #d5edf7; padding: 15px; border-radius: 8px; margin-top: 15px; }
+    </style>
+</head>
+<body>
+<h2>📚 Sector 1 – Estudiantes de la Biblioteca Universitaria</h2>
+
+<h3>👥 Lista de Estudiantes (Desde Stack):</h3>
+<ul>
+    <li th:each="estudiante : ${resumenEstudiantes}" th:text="${estudiante}"></li>
+</ul>
+
+<div class="bibliotecario-info">
+    <h3>👨‍💼 Bibliotecario Principal</h3>
+    <p><strong>Nombre:</strong> <span th:text="${bibliotecarioNombre}"></span></p>
+    <p><strong>Categoría:</strong> <span th:text="${bibliotecarioCategoria}"></span></p>
+    <p><strong>Facultad:</strong> <span th:text="${bibliotecarioFacultad}"></span></p>
+    <p><strong>Libros Catalogados:</strong> <span th:text="${librosCatalogados}"></span></p>
+</div>
+<div style="text-align: center; margin-top: 30px;">
+    <a th:href="@{/}" class="back-button">🏠 Volver al Inicio</a>
+</div>
+</body>
+</html>

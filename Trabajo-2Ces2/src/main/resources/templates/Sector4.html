@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sector 4 - Goles Totales del Torneo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #9b59b6; padding-bottom: 10px; }
+        ul { list-style-type: none; padding: 0; }
+        li { background: #f4ecf7; margin: 5px 0; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+<h2>📚 Sector 4 – Libros Prestados del Semestre</h2>
+<ul>
+    <li th:each="t : ${totales}" th:text="${t}"></li>
+</ul>
+</body>
+<div style="text-align: center; margin-top: 30px;">
+    <a th:href="@{/}" class="back-button">🏠 Volver al Inicio</a>
+</div>
+</html>

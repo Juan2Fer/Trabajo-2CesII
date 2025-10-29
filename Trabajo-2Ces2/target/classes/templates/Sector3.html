@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sector 3 - Exploración de Equipos</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #f39c12; padding-bottom: 10px; }
+        ul { list-style-type: none; padding: 0; }
+        li { background: #fff3cd; margin: 5px 0; padding: 10px; border-radius: 5px; border-left: 4px solid #f39c12; }
+    </style>
+</head>
+<body>
+<h2>📚 Sector 3 – Exploración de Facultades (Estudiantes MEDICINA)</h2>
+<ul>
+    <li th:each="n : ${estudiantesMedicina}" th:text="${n}"></li>
+</ul>
+<p th:if="${#lists.isEmpty(estudiantesMedicina)}" style="color: #7f8c8d;">
+    No hay estudiantes registrados en la facultad de MEDICINA.
+</p>
+</body>
+<div style="text-align: center; margin-top: 30px;">
+    <a th:href="@{/}" class="back-button">🏠 Volver al Inicio</a>
+</div>
+</html>

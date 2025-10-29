@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liga de Fútbol Intergaláctico</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .nav-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border-color: #667eea;
+        }
+        .nav-card h3 {
+            margin: 0 0 10px 0;
+            color: #667eea;
+            font-size: 1.3em;
+        }
+        .nav-card p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .back-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .back-button:hover {
+            background: white;
+            color: #667eea;
+            border-color: #667eea;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>📚 Biblioteca Universitaria Digital</h1>
+    <p>Sistema de Gestión de Estudiantes y Préstamos</p>
+</div>
+
+<div class="nav-grid">
+    <a th:href="@{/sector1}" class="nav-card">
+        <div class="icon">👥</div>
+        <h3>Sector 1</h3>
+        <p>Resumen de Estudiantes y Bibliotecario Principal</p>
+    </a>
+
+    <a th:href="@{/sector2}" class="nav-card">
+        <div class="icon">🔄</div>
+        <h3>Sector 2</h3>
+        <p>Comparación Stack vs Deque de Estudiantes</p>
+    </a>
+
+    <a th:href="@{/sector3}" class="nav-card">
+        <div class="icon">🔍</div>
+        <h3>Sector 3</h3>
+        <p>Estudiantes Filtrados por Facultad</p>
+    </a>
+
+    <a th:href="@{/sector4}" class="nav-card">
+        <div class="icon">📖</div>
+        <h3>Sector 4</h3>
+        <p>Libros Prestados por Estudiante</p>
+    </a>
+
+    <a th:href="@{/sector5}" class="nav-card">
+        <div class="icon">📊</div>
+        <h3>Sector 5</h3>
+        <p>Evaluación Individual de Estudiantes</p>
+    </a>
+</div>
+</body>
+</html>

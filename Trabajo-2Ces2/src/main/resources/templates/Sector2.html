@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sector 2 - Flujos de Jugadores</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #2c3e50; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; }
+        h3 { color: #34495e; margin-top: 25px; }
+        ul { list-style-type: none; padding: 0; }
+        li { background: #f8f9fa; margin: 5px 0; padding: 8px; border-radius: 5px; border-left: 4px solid #3498db; }
+    </style>
+</head>
+<body>
+<h2>📚 Sector 2 – Flujos de Estudiantes</h2>
+
+<h3>📚 Desde Stack (Estudiantes Apilados)</h3>
+<ul>
+    <li th:each="s : ${desdeStack}" th:text="${s}"></li>
+</ul>
+
+<h3>🔄 Desde Deque (Estudiantes en Fila)</h3>
+<ul>
+    <li th:each="d : ${desdeDeque}" th:text="${d}"></li>
+</ul>
+</body>
+<div style="text-align: center; margin-top: 30px;">
+    <a th:href="@{/}" class="back-button">🏠 Volver al Inicio</a>
+</div>
+</html>
